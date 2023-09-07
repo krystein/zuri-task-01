@@ -1,49 +1,34 @@
-const nameElement = document.querySelector('[data-testid="name"]');
-const ageElement = document.querySelector('[data-testid="age"]');
-const currentTimeElement = document.querySelector(
-  '[data-testid="current-time"]'
-);
-const dataChartElement = document.querySelector('[data-testid="data-chart"]');
-const changeDataButton = document.querySelector(
-  '[data-testid="change-data-button"]'
-);
-
-function updateTime() {
-  const now = new Date();
-  const formattedTime = now.toLocaleTimeString();
-  currentTimeElement.textContent = formattedTime;
+function getCurrentDayOfWeek() {
+  const daysOfWeek = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const currentDate = new Date();
+  const dayIndex = currentDate.getDay();
+  return daysOfWeek[dayIndex];
 }
 
-updateTime();
-setInterval(updateTime, 1000);
+function updateCurrentUTCTime() {
+  const currentDate = new Date();
+  const currentUTCTime = currentDate.toUTCString();
+  return currentUTCTime;
+}
 
-const chart = new Chart(dataChartElement, {
-  type: "pie",
-  data: {
-    labels: ["January", "February", "March", "April", "May"],
-    datasets: [
-      {
-        label: "Data Points",
-        data: [12, 19, 3, 5, 2],
-        backgroundColor: "rgba(75, 192, 192, 0.2)",
-        borderColor: "rgba(75, 192, 192, 1)",
-        borderWidth: 1,
-      },
-    ],
-  },
-  options: {
-    scales: {
-      y: {
-        beginAtZero: true,
-      },
-    },
-  },
-});
+const slackUserNameElement = document.querySelector(
+  '[data-testid="slackUserName"]'
+);
+const currentDayOfTheWeekElement = document.querySelector(
+  '[data-testid="currentDayOfTheWeek"]'
+);
+const currentUTCTimeElement = document.querySelector(
+  '[data-testid="currentUTCTime"]'
+);
 
-changeDataButton.addEventListener("click", () => {
-  const newData = Array.from({ length: 5 }, () =>
-    Math.floor(Math.random() * 20)
-  );
-  chart.data.datasets[0].data = newData;
-  chart.update();
-});
+slackUserNameElement.textContent = "Nworah Christian";
+currentDayOfTheWeekElement.textContent = `Current Day of the Week: ${getCurrentDayOfWeek()}`;
+currentUTCTimeElement.textContent = `Current UTC Time: ${updateCurrentUTCTime()}`;

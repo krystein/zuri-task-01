@@ -14,22 +14,34 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.info,
-.real-time,
-.chart {
+h1 {
+  color: #007bff;
+}
+
+.info {
   margin-top: 20px;
 }
 
-button {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 5px;
-  cursor: pointer;
+p {
+  margin: 10px 0;
 }
 
-.data-testid {
-  font-size: 0.8rem;
-  color: #888;
+strong {
+  font-weight: bold;
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
