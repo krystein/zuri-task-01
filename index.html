@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Info and Real-Time Data</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1 data-testid="page-title">Personal Information</h1>
+        <div class="info">
+            <p><strong data-testid="name-label">Name:</strong> <span data-testid="name">Nworah Christian</span></p>
+            <p><strong data-testid="age-label">Age:</strong> <span data-testid="age">25</span></p>
+        </div>
+        <div class="real-time">
+            <p><strong data-testid="time-label">Current Time:</strong> <span data-testid="current-time"></span></p>
+        </div>
+        <div class="chart">
+            <canvas id="data-chart" data-testid="data-chart"></canvas>
+        </div>
+        <button id="change-data-button" data-testid="change-data-button">Change Data</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
