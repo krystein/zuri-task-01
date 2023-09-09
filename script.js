@@ -20,14 +20,15 @@ function getCurrentDayOfWeek() {
   ];
   const currentDate = new Date();
   const dayIndex = currentDate.getDay();
-  currentDayOfTheWeekElement.textContent = daysOfWeek[dayIndex];
+  currentDayOfTheWeekElement.textContent = `Current Day of the Week: ${daysOfWeek[dayIndex]}`;
 }
 
 function updateCurrentUTCTime() {
   const now = new Date();
-  const formattedTime = now.toLocaleTimeString();
-  currentUTCTimeElement.textContent = formattedTime;
+  const formattedTime = now.toISOString();
+  currentUTCTimeElement.textContent = `${formattedTime}`;
 }
+
 updateCurrentUTCTime();
 setInterval(updateCurrentUTCTime, 1000);
 
