@@ -2,7 +2,6 @@ body {
   box-sizing: border-box;
   font-size: 16px;
   font-weight: 700;
-  line-height: 1.5;
   color: #212529;
 }
 
@@ -10,7 +9,6 @@ h1 {
   font-size: 2rem;
   font-weight: 700;
   line-height: 1.5;
-  font-family: cursive;
 }
 
 img {
