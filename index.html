@@ -3,25 +3,31 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Info</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>Stage 1</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <div class="container">
-        <h1>My Personal Info</h1>
-        <div class="info">
-            <p data-testid="slackUserName"><strong>Slack Name:</strong> Nworah Christian</p>
-            <img src="./Screenshot_20210613-121418.png" alt="Nworah Christian" data-testid="slackDisplayImage">
-            <p><strong>Current Day of the Week:</strong> <span data-testid="currentDayOfTheWeek"></span></p>
-            <p><strong>Current UTC Time:</strong> <span data-testid="currentUTCTime"></span></p>
-            <p data-testid="myTrack"><strong>Track:</strong> Frontend</p>
-            <p data-testid="githubURL"><strong>GitHub URL:</strong> <a
-                    href="https://github.com/krystein/zuri-task-01">https://github.com/krystein/zuri-task-01</a></p>
-        </div>
+        <h1 data-testid="slackUserName">Nworah christian</h1>
+        <img src="./Screenshot_20210613-121418.png" alt="Nworahchristian" data-testid="slackDisplayImage" />
+
+        <p data-testid="currentDayOfTheWeek">
+            Current Day of the Week: <span id="dayOfWeek"></span></p>
+        <p data-testid="currentUTCTime">
+            Current UTC Time: <span id="utcTime"></span></p>
+        <p data-testid="myTrack">My Track: Front End</p>
+        </p>
+
+        <p> <a href="https://github.com/krystein/zuri-task-01" data-testid="githubURL">Repository</a> </p>
     </div>
-    <script src="./script.js"></script>
+
+
+
+
+    <script src="script.js"></script>
 </body>
 
 </html>
